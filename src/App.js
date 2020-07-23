@@ -7,18 +7,18 @@ function App() {
 
       
       <div className='top-buttons-wrapper'>
-        <button className='all-buttons'>Button-One</button>
-        <button className='all-buttons'>Button-two</button>
-        <button className='all-buttons'>Button-three</button>
+        <button className='all-buttons'>ON/OFF</button>
+        <button className='all-buttons'>Grid Size</button>
+        <button className='all-buttons'>Custom pattern</button>
       </div>
 
       <div className='grid-wrapper'>
         </div>
       
       <div className='bottom-buttons-wrapper'>
-         <button className='all-buttons'>Button-Four</button>
-        <button className='all-buttons'>Button-Five</button>
-        <button className='all-buttons'>Button-Six</button>
+         <div className='all-buttons' generation-div><h3>generation: { 0}</h3></div>
+        <button className='all-buttons'>Random pattern</button>
+        <button className='all-buttons'>Clear</button>
       </div>
       
     </div>

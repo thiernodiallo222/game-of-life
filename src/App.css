@@ -46,3 +46,12 @@ align-items: center;
   background: salmon;
   border-radius: 25px;
 }
+.generation-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+h3{
+  width: 90%;
+  margin-left: 5%;
+}
