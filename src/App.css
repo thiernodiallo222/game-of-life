@@ -1,6 +1,48 @@
 .main-component{
-background: black;
+background:whitesmoke;
+width: 60%;
+height: 70vh;
+margin-left:20%;
+margin-top: 15vh;
 }
 .grid-component{
-background: rgb(185, 49, 71);
+/* background: rgb(185, 49, 71);
+width: 100%;
+height: 10%;
+margin-bottom:5%;
+margin-top: 5%; */
+}
+
+.top-buttons-wrapper{
+/* background: rgb(49, 112, 185); */
+width: 100%;
+height: 14%;
+/* margin-bottom:0;
+margin-top:0; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.grid-wrapper{
+background:blue;
+background: rgb(233, 227, 228);
+width: 100%;
+height: 72%;
+}
+
+.bottom-buttons-wrapper{
+/* background: rgb(54, 54, 206); */
+width: 100%;
+height: 14%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.all-buttons{
+  width: 32%;
+  height: 100%;
+  background: salmon;
+  border-radius: 25px;
 }
