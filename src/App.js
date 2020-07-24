@@ -1,29 +1,37 @@
 import React from 'react';
 import './App.css';
+import Grid from './Grid';
 
-function App() {
-  return (
-    <div className="main-component">
 
-      
+export class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      generation:0
+    }
+  }
+  render() {
+    return (
+      <div className="main-component">
       <div className='top-buttons-wrapper'>
-        <button className='all-buttons'>ON/OFF</button>
-        <button className='all-buttons'>Grid Size</button>
-        <button className='all-buttons'>Custom pattern</button>
+        <button className='all-buttons'>START / STOP</button>
+        <button className='all-buttons'>GRID SIZING</button>
+        <button className='all-buttons'>CUSTOM PATTERN</button>
       </div>
 
-      <div className='grid-wrapper'>
+        <div className='grid-wrapper'>
+          <Grid className='grid'/>
         </div>
       
       <div className='bottom-buttons-wrapper'>
-         <div className='all-buttons' generation-div><h3>generation: { 0}</h3></div>
-        <button className='all-buttons'>Random pattern</button>
-        <button className='all-buttons'>Clear</button>
+         <div className='all-buttons' generation-div><h3 >GENERATION: {this.state.generation}</h3></div>
+        <button className='all-buttons'>RANDOM PATTERN</button>
+        <button className='all-buttons'>CLEAR ALL</button>
       </div>
       
     </div>
   )
-
+  }
 }
 
-export default App;
+export default App
