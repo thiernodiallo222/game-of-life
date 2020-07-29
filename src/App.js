@@ -61,7 +61,16 @@ class App extends React.Component {
   
   play = () => {
     let g = this.state.fullGrid;
-    let g2 = clonedGrid(this.state.fullGrid);
+    let counter=0
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.cols; j++){
+        if (g[i][j]){
+          counter++;
+        }
+      }
+    }
+    if (counter > 0) {
+       let g2 = clonedGrid(this.state.fullGrid);
     for (let i = 0; i < this.rows; i++){
       for (let j = 0; j < this.cols; j++){
         let count = 0;
@@ -81,6 +90,7 @@ class App extends React.Component {
       fullGrid: g2,
       generation: this.state.generation + 1,
     });
+    }
   }
   // componentDidMount() {
   //   this.seed()
