@@ -174,7 +174,7 @@ randomPattern = () => {
 
           <button className='all-buttons' onClick={this.running ? this.stopButton : this.startButton}>{this.running? "STOP": "START"}</button>
           <button className='all-buttons' onClick={this.toggleSize}>{this.rows===30? "Larger View":"Smaller View"}</button>
-          <button className='all-buttons' onClick={this.flag? this.anotherPattern: this.customPattern }>{this.flag? "Another Pattern":"Custom Pattern"}</button>
+          <button className='all-buttons' onClick={this.flag? this.customPattern: this.customPattern }>{this.flag? "Custom Pattern 2":"Custom Pattern 1"}</button>
            <button className='all-buttons' onClick={this.randomPattern}>RANDOM PATTERN</button>
           <button className='all-buttons' onClick={this.clearAll}>CLEAR ALL</button>
         </div>
