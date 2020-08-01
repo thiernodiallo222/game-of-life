@@ -29,9 +29,9 @@ randomPattern = () => {
      this.setState({
        fullGrid: copy,
     })
-     }
-   
-  }
+    }
+}
+  
   startButton = () => {
     let count = 0;
     let g = this.state.fullGrid;
@@ -149,7 +149,7 @@ randomPattern = () => {
 
   constructor() {
     super();
-    this.speed = 500;
+    this.speed = 1000;
     this.rows = 30;
     this.cols = 30;
     this.running = false;
@@ -177,6 +177,7 @@ randomPattern = () => {
           <button className='all-buttons' onClick={this.flag? this.customPattern: this.customPattern }>{this.flag? "Custom Pattern 2":"Custom Pattern 1"}</button>
            <button className='all-buttons' onClick={this.randomPattern}>RANDOM PATTERN</button>
           <button className='all-buttons' onClick={this.clearAll}>CLEAR ALL</button>
+          {/* <button className="all-buttons" onClick={this.speed===250?this.FastSpeed:this.SlowSpeed}>Change Speed </button> */}
         </div>
 
      
