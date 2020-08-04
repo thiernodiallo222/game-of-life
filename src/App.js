@@ -7,7 +7,7 @@ class App extends React.Component {
 
     constructor() {
     super();
-    this.speed = 100;
+    this.speed = 300;
     this.rows = 30;
     this.cols = 50;
     this.running = false;
@@ -41,19 +41,19 @@ class App extends React.Component {
 	}
 
   startButton = () => {
-    let count = 0;
-    let g = clonedGrid(this.state.fullGrid);
-    for (let i = 0; i < this.rows; i++) {
-      for (let j = 0; j < this.cols; j++) {
-        if (g[i][j]) count++;
-      }
-    }
-    if (count > 0 || this.randomPattern()) {
+    // let count = 0;
+    // let g = clonedGrid(this.state.fullGrid);
+    // for (let i = 0; i < this.rows; i++) {
+    //   for (let j = 0; j < this.cols; j++) {
+    //     if (g[i][j]) count++;
+    //   }
+    // }
+    // if (count > 0 || this.state.generation>0) {
       this.running = true;
       clearInterval(this.intervalId);
       this.intervalId = setInterval(this.play, this.speed);
     }
-  }
+  // }
   
   stopButton = () => {
     clearInterval(this.intervalId);
@@ -65,6 +65,7 @@ class App extends React.Component {
 
 
   clearAll = () => {
+    this.stopButton();
     let grid = Array(this.rows).fill().map(() => Array(this.cols).fill(false));
     this.running = false;
 		this.setState({
@@ -106,7 +107,6 @@ class App extends React.Component {
   }
 
   toggleSize = () => {
-    // if (this.running===false) {
     this.rows = this.rows ===30?40:30 ;
     this.cols = this.cols ===50? 60: 50;
     this.setState({
@@ -116,7 +116,8 @@ class App extends React.Component {
   
 play = () => {
 		let g = this.state.fullGrid;
-		let g2 = clonedGrid(this.state.fullGrid);
+  let g2 = clonedGrid(this.state.fullGrid);
+
 
 		for (let i = 0; i < this.rows; i++) {
 		  for (let j = 0; j < this.cols; j++) {
@@ -130,15 +131,15 @@ play = () => {
 		    if (i < this.rows - 1 && j > 0) if (g[i + 1][j - 1]) count++;
 		    if (i < this.rows - 1 && j < this.cols - 1) if (g[i + 1][j + 1]) count++;
 		    if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = false;
-		    if (!g[i][j] && count === 3) g2[i][j] = true;
+        if (!g[i][j] && count === 3) g2[i][j] = true;
 		  }
     }
+  
     this.setState({
       fullGrid: g2,
-      generation: this.state.generation + 1,
+      generation:this.state.generation + 1,
     });
   }
-
 
   componentDidMount() {
       this.randomPattern();
@@ -169,7 +170,7 @@ play = () => {
        
         <h2 className="generation">Generation: {this.state.generation}</h2>
         <div className="section">
-          <p> Rules of the game of life </p>
+          <h3> Rules of the game of life </h3>
           <p>1. Any live cell that has less than two live neighbors, dies</p>
           <p>2. Any live cell that has more than tree live neighbors, dies</p>
           <p>3. Any live cell that has two or tree live neighbors, survives to the next generation</p>

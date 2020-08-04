@@ -41,12 +41,12 @@ box-sizing: border-box;
 background:rgb(239, 245, 239);
 }
 .on{
-  background:rgb(228, 133, 9);
+  background:rgb(34, 13, 223);
 }
 
 
 .all-buttons{
-  background:rgb(235, 238, 240);
+  background:rgb(237, 235, 240);
   width: 20%;
   height: 100%;
   border:2px, solid, darkgray;
