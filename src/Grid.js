@@ -4,8 +4,8 @@ import "./App.css";
 class Grid extends Component {
 
   render() {
-    const width = this.props.cols*17;
-    const rowsArray = [];
+    const width = (this.props.cols*14)+1;
+    let rowsArray = [];
     let cellClass = "";
     for (let i = 0; i < this.props.rows; i++){
       for (let j = 0; j < this.props.cols; j++){

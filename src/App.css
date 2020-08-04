@@ -27,9 +27,10 @@ box-sizing: border-box;
 
 .cell{
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: -1px; 
+  width: 15px;
+  height: 15px;
+  margin-left: -1px; 
+  margin-bottom: -1px; 
   border: 1px solid rgb(168, 160, 154);
   box-sizing: border-box;
 }
@@ -58,4 +59,10 @@ background:rgb(239, 245, 239);
   align-items: center;
   color:black;
   box-sizing: border-box;
+}
+.section{
+  background: whitesmoke;
+  padding-left:6px;
+  padding-right: 3px;
+  border-radius:5px;
 }

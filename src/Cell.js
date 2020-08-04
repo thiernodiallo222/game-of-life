@@ -6,9 +6,9 @@ class Cell extends Component {
   }
   render() {
     return (
-      <div className={this.props.cellClass}
-        // key={this.props.key}
-        id={this.props.cellId}
+      <div
+        className={this.props.cellClass}
+        cellId={this.props.cellId}
         onClick={this.selectCell}
       />
     );
